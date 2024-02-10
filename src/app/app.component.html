@@ -1,0 +1,13 @@
+<app-todo (newTodo) = "newTodo($event)"></app-todo>
+
+<div *ngIf="todos.length > 0">
+    <div *ngFor="let t of todos">
+        <h4>{{t.title | uppercase}}</h4>
+        <h4>{{t.date}}</h4>
+    </div>
+
+</div>
+
+<ng-template #noTodos>
+    <h2>You are free</h2>
+</ng-template>
